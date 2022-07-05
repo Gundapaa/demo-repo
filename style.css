@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background: radial-gradient(circle, #fff, rgb(96, 96, 96));
+    -o-background: radial-gradient(circle, #fff, rgb(96, 96, 96));
+    -ms-background: radial-gradient(circle, #fff, rgb(96, 96, 96));
+    -moz-background: radial-gradient(circle, #fff, rgb(96, 96, 96));
+    -webkit-background: radial-gradient(circle, #fff, rgb(96, 96, 96));
+}
+
+.container {
+    height: 480px;
+    width: 640px;
+    background-color: rgba(0, 192, 255, 0.48);
+    margin: 128px auto;
+    border-radius: 16px;
+    padding: 8px;
+    box-shadow: 4px 4px 2px 4px rgba(0, 128, 255, 1);
+    -o-box-shadow: 4px 4px 2px 4px rgba(0, 128, 255, 1);
+    -ms-box-shadow: 4px 4px 2px 4px rgba(0, 128, 255, 1);
+    -moz-box-shadow: 4px 4px 2px 4px rgba(0, 128, 255, 1);
+    -webkit-box-shadow: 4px 4px 2px 4px rgba(0, 128, 255, 1);
+    position: relative;
+}
+
+#score {
+    background-color: gold;
+    color: rgb(96, 96, 96);
+    padding: 8px;
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 0 2px 1px 2px rgb(128, 96, 4);
+    -o-box-shadow: 0 2px 1px 2px rgb(128, 96, 4);
+    -ms-box-shadow: 0 2px 1px 2px rgb(128, 96, 4);
+    -moz-box-shadow: 0 2px 1px 2px rgb(128, 96, 4);
+    -webkit-box-shadow: 0 2px 1px 2px rgb(128, 96, 4);
+    left: 544px;
+    top: 16px;
+}
+
+.times {
+    width: 64px;
+    background-color: rgb(192, 192, 192);
+    margin: 4px;
+    padding: 2px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 1px 4px 2px 2px rgb(0, 0, 0, 0.48);
+    position: relative;
+}
+.times:hover {
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.48);
+    -o-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.48);
+    -ms-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.48);
+    -moz-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.48);
+    -webkit-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.48);
+    cursor: pointer;
+}
+.times:active {
+    box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    top: 2px;
+}
+.times1 {
+    position: relative;
+    float: left;
+    margin-left: 12px;
+}
+.times2 {
+    position: relative;
+    float: left;
+    margin-left: 12px;
+}
+
+#correct {
+    position: absolute;
+    left: 292px;
+    top: 16px;
+    background-color: rgb(24, 192, 0);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    display: none;
+}
+
+#wrong {
+    position: absolute;
+    left: 280px;
+    top: 16px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    display: none;
+}
+
+#question {
+    width: 480px;
+    height: 156px;
+    line-height: 156px;
+    margin: 64px auto 8px auto;
+    background-color: rgb(128, 48, 255, 0.48);
+    box-shadow: 1px 4px 2px 2px blueviolet;
+    -o-box-shadow: 1px 4px 2px 2px blueviolet;
+    -ms-box-shadow: 1px 4px 2px 2px blueviolet;
+    -moz-box-shadow: 1px 4px 2px 2px blueviolet;
+    -webkit-box-shadow: 1px 4px 2px 2px blueviolet;
+    font-size: 24px;
+    text-align: center;
+    font-family: cursive;
+    border-radius: 4px;
+}
+#question {
+    line-height: 1.5;
+}
+
+#instruction {
+    width: 480px;
+    height: 48px;
+    background-color: rgb(192, 48, 255, 0.48);
+    margin: 14px auto;
+    text-align: center;
+    line-height: 48px;
+    box-shadow: 1px 4px 2px 2px rgb(192, 48, 255, 0.96);
+    -o-box-shadow: 1px 4px 2px 2px rgb(192, 48, 255, 0.96);
+    -ms-box-shadow: 1px 4px 2px 2px rgb(192, 48, 255, 0.96);
+    -moz-box-shadow: 1px 4px 2px 2px rgb(192, 48, 255, 0.96);
+    -webkit-box-shadow: 1px 4px 2px 2px rgb(192, 48, 255, 0.96);
+    border-radius: 4px;
+}
+#instruciton p {
+    line-height: 1.5;
+}
+
+#choices {
+    height: 96px;
+    width: 480px;
+    margin: 14px auto;
+    border-radius: 4px;
+}
+
+.box {
+    height: 96px;
+    width: 96px;
+    float: left;
+    background-color: white;
+    border-radius: 4px;
+    margin-right: 32px; 
+    cursor: pointer;
+    box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    -o-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    -ms-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    text-align: center;
+    line-height: 96px;
+    font-size: 24px;
+    position: relative;
+    transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+.box p{
+    line-height: 1.5;
+}
+#choices div:nth-child(4) {
+    margin-right: 0;
+}
+.box:hover {
+    background-color: rgba(0, 0, 128, 0.24);
+    color: white;
+    box-shadow: 1px 4px 2px 2px rgba(128, 0, 128, 0.48);
+    -o-box-shadow: 1px 4px 2px 2px rgba(128, 0, 128, 0.48);
+    -ms-box-shadow: 1px 4px 2px 2px rgba(128, 0, 128, 0.48);
+    -moz-box-shadow: 1px 4px 2px 2px rgba(128, 0, 128, 0.48);
+    -webkit-box-shadow: 1px 4px 2px 2px rgba(128, 0, 128, 0.48);
+}
+.box:active {
+    box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    top: 4px;
+}
+
+#startReset {
+    height: 32px;
+    width: 96px;
+    left: 260px;
+    top: 12px;
+    background-color: rgba(254, 254, 254, 0.48);
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    -o-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    -ms-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    text-align: center;
+    line-height: 32px;
+    position: relative;
+    transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+#startReset:hover {
+    background-color: rgba(0, 0, 128, 0.24);
+    color: white;
+    box-shadow: 1px 4px 2px 2px rgba(128, 0, 128, 0.48);
+    -o-box-shadow: 1px 4px 2px 2px rgba(128, 0, 128, 0.48);
+    -ms-box-shadow: 1px 4px 2px 2px rgba(128, 0, 128, 0.48);
+    -moz-box-shadow: 1px 4px 2px 2px rgba(128, 0, 128, 0.48);
+    -webkit-box-shadow: 1px 4px 2px 2px rgba(128, 0, 128, 0.48);
+}
+#startReset:active {
+    box-shadow: none;
+    -o-box-shadow: none;
+    -ms-box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    top: 16px;
+}
+
+#counter {
+    width: 172px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: rgba(192, 255, 48, 0.72);
+    padding: 8px;
+    position: absolute;
+    top: 420px;
+    left: 440px;
+    box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    -o-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    -ms-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 1px 4px 2px 2px rgba(0, 0, 0, 0.24);
+    /* visibility: hidden; */
+    display: none;
+}
+
+#over {
+    height: 256px;
+    line-height: 128px;
+    width: 560px;
+    text-align: center;
+    color: white;
+    font-size: 48px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 96px;
+    left: 42px;
+    border-radius: 8px;
+    background: linear-gradient(rgba(255, 128, 0, 0.96), rgba(255, 48, 0, 0.96));
+    -o-background: linear-gradient(rgba(255, 128, 0, 0.96), rgba(255, 48, 0, 0.96));
+    -ms-background: linear-gradient(rgba(255, 128, 0, 0.96), rgba(255, 48, 0, 0.96));
+    -moz-background: linear-gradient(rgba(255, 128, 0, 0.96), rgba(255, 48, 0, 0.96));
+    -webkit-background: linear-gradient(rgba(255, 128, 0, 0.96), rgba(255, 48, 0, 0.96));
+    z-index: 2;
+    display: none;
+}
